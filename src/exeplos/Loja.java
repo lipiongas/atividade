@@ -48,6 +48,23 @@ public class Loja {
 	public void setFuncionarios(Funcionario[] funcionarios) {
 		this.funcionarios = funcionarios;
 	}
+
+
+	public void identificarContatoFuncionarioMaiorSalario() {
+		Funcionario func = this.getFuncionarios()[0];
+		for(int i =0; i< this.funcionarios.length; i++) {
+			
+			if(func.getSalario() < this.getFuncionarios()[i].getSalario()) {
+				func = this.getFuncionarios()[i];
+			}
+			
+		}
+		System.out.println("contaco maior salario: ");
+		System.out.println("Celular: " + func.getContato().getCelular());
+		System.out.println("Email: " + func.getContato().getEmail());
+		
+		
+	}
 	
 
 }
