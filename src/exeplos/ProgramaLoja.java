@@ -26,6 +26,8 @@ public class ProgramaLoja {
 		
 		l1.identificarContatoFuncionarioMaiorSalario();
 		
+		l1.identificarNomeClienteMaisAntigo();
+		
 	}
 
 }
