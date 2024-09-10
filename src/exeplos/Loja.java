@@ -52,7 +52,7 @@ public class Loja {
 
 	public void identificarContatoFuncionarioMaiorSalario() {
 		Funcionario func = this.getFuncionarios()[0];
-		for(int i =0; i< this.funcionarios.length; i++) {
+		for(int i =0; i< this.getFuncionarios().length; i++) {
 			
 			if(func.getSalario() < this.getFuncionarios()[i].getSalario()) {
 				func = this.getFuncionarios()[i];
@@ -63,6 +63,21 @@ public class Loja {
 		System.out.println("Celular: " + func.getContato().getCelular());
 		System.out.println("Email: " + func.getContato().getEmail());
 		
+		
+	}
+
+
+	public void identificarNomeClienteMaisAntigo() {
+		 
+		Cliente cl = this.getClientes()[0];
+		for(int i = 0; i < this.getClientes().length; i++) {
+			if(cl.getCodigo() < this.getClientes()[i].getCodigo()) {
+				cl = this.getClientes()[i];
+			}
+		}
+		System.out.println("cliente mais antigo é o: ");
+		System.out.println("nome" + cl.getNome());
+		System.out.println("numero" + cl.getContato().getCelular());
 		
 	}
 	
